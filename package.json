@@ -1,41 +1,49 @@
 {
-    "name": "typescript_react",
-    "version": "1.0.0",
-    "description": "for practice",
-    "main": "index.js",
-    "scripts": {
-        "start": "webpack && webpack-dev-server --content-base --open",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "webpack-defaults": "webpack-defaults"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Oliver0531/typescript_react.git"
-    },
-    "keywords": [
-        "react",
-        "typescript",
-        "webpack",
-        "jquery"
-    ],
-    "author": "Oliver",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Oliver0531/typescript_react/issues"
-    },
-    "homepage": "https://github.com/Oliver0531/typescript_react#readme",
-    "dependencies": {
-        "@types/jquery": "3.2.16",
-        "@types/react": "^16.0.18",
-        "@types/react-dom": "^16.0.2",
-        "jquery": "3.2.1",
-        "react": "16.0.0",
-        "react-dom": "16.0.0",
-        "source-map-loader": "0.2.3"
-    },
-    "devDependencies": {
-        "awesome-typescript-loader": "3.3.0",
-        "webpack-dev-server": "^2.9.4",
-        "typescript": "^2.6.1"
-    }
+  "name": "typescript_react",
+  "version": "1.0.0",
+  "description": "for practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && webpack-dev-server --content-base --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-defaults": "webpack-defaults",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oliver0531/typescript_react.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "webpack",
+    "jquery"
+  ],
+  "author": "Oliver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oliver0531/typescript_react/issues"
+  },
+  "homepage": "https://github.com/Oliver0531/typescript_react#readme",
+  "dependencies": {
+    "@types/jquery": "3.2.16",
+    "@types/react": "^16.0.18",
+    "@types/react-dom": "^16.0.2",
+    "jquery": "3.2.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "source-map-loader": "0.2.3"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "3.3.0",
+    "precommit-hook": "^3.0.0",
+    "typescript": "^2.6.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
